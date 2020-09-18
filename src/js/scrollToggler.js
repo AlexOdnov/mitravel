@@ -4,19 +4,27 @@ const scrollToggler = (targetElement, activeClass = 'active') => {
 
   const scrollWidth = window.innerWidth - document.body.offsetWidth + 'px';
 
-  const fixedElements = document.querySelectorAll('[data-fixed="true"]');
+  const fixedElements = document.querySelectorAll('[data-fixed]');
 
   if (targetElement.classList.contains(activeClass)) {
     document.body.style.overflowY = 'hidden';
     document.body.style.paddingRight = scrollWidth;
     fixedElements.forEach((el) => {
-      el.style.marginRight = scrollWidth;
+      if (el.dataset.fixed === 'outer') {
+        el.style.marginRight = scrollWidth;
+      } else if (el.dataset.fixed === 'inner') {
+        el.style.paddingRight = scrollWidth;
+      }
     });
   } else {
     document.body.style.overflowY = '';
     document.body.style.paddingRight = 0;
     fixedElements.forEach((el) => {
-      el.style.marginRight = 0;
+      if (el.dataset.fixed === 'outer') {
+        el.style.marginRight = 0;
+      } else if (el.dataset.fixed === 'inner') {
+        el.style.paddingRight = 0;
+      }
     });
   }
 };

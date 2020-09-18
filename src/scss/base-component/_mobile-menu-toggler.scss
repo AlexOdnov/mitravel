@@ -1,5 +1,5 @@
 .mobile-menu-toggler {
-  $mmt-color: #000;
+  $mmt-color: $color-light-1;
   $mmt-size: 40px;
 
   display: block;
@@ -11,53 +11,35 @@
   cursor: pointer;
   z-index: 10;
 
-  &__element {
-    display: block;
-    width: 100%;
-    height: $mmt-size * 0.1;
-    background-color: $mmt-color;
-    border-radius: $mmt-size * 0.05;
-    transition: all 0.3s ease 0s;
-  }
-
   &::before,
   &::after {
     content: '';
     position: absolute;
     display: block;
     width: 100%;
-    height: $mmt-size * 0.1;
+    height: $mmt-size * 0.04;
     background-color: $mmt-color;
-    border-radius: $mmt-size * 0.05;
     transition: all 0.3s ease 0s;
   }
 
   &::before {
-    top: $mmt-size * 0.15;
+    top: $mmt-size * 0.4;
   }
 
   &::after {
-    bottom: $mmt-size * 0.15;
+    bottom: $mmt-size * 0.4;
   }
 
   &.active {
   }
 
   &.active::before {
-    top: $mmt-size * 0.5 - $mmt-size * 0.05;
+    top: $mmt-size * 0.5 - $mmt-size * 0.02;
     transform: rotate(45deg);
   }
 
   &.active::after {
-    bottom: $mmt-size * 0.5 - $mmt-size * 0.05;
+    bottom: $mmt-size * 0.5 - $mmt-size * 0.02;
     transform: rotate(-45deg);
-  }
-
-  &.active .mobile-menu-toggler__element {
-    transform: scale(0);
-  }
-
-  @media #{$desktop} {
-    display: none;
   }
 }

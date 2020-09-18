@@ -1,28 +1,17 @@
 .navigation {
-  $header-height: 90px;
+  $header-height: 122px;
   $mob-mozilla: 45px; //mobile mozilla bug with bottom navbar
 
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
 
-  width: 100%;
+  width: 100vw;
 
-  background-color: $bg-color-base;
-  color: $font-color-base;
+  background-color: $color-dark-4;
+  color: $color-light-1;
   z-index: 2;
-  transform: translateY(-100%);
-
-  @media #{$tablet} {
-    position: static;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-
-    background-color: initial;
-    transform: translateY(0);
-  }
+  transform: translate(-50%, -100vh);
 
   &__list {
     display: flex;
@@ -32,42 +21,28 @@
     flex-wrap: nowrap;
     max-height: calc(100vh - #{$header-height} - #{$mob-mozilla});
     overflow-y: auto;
-
-    @media #{$tablet} {
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-between;
-    }
   }
 
   &__item {
     padding: 0.5em;
-
-    @media #{$tablet} {
-      flex-grow: 1;
-    }
   }
 
   &__link {
     display: block;
+
     text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
 
-    @media #{$tablet} {
-      text-decoration: none;
-      transition: text-decoration 0.3s ease 0s;
+    transition: text-decoration 0.3s ease 0s;
 
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-      }
+    &:hover,
+    &:focus {
+      text-decoration: underline;
     }
   }
 
   &.active {
-    transform: translateY(100%);
-
-    @media #{$tablet} {
-      transform: translateY(0);
-    }
+    transform: translate(-50%, 100%);
   }
 }
