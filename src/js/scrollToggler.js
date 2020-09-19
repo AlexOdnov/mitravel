@@ -18,12 +18,12 @@ const scrollToggler = (targetElement, activeClass = 'active') => {
     });
   } else {
     document.body.style.overflowY = '';
-    document.body.style.paddingRight = 0;
+    document.body.style.paddingRight = '';
     fixedElements.forEach((el) => {
       if (el.dataset.fixed === 'outer') {
-        el.style.marginRight = 0;
+        el.style.marginRight = '';
       } else if (el.dataset.fixed === 'inner') {
-        el.style.paddingRight = 0;
+        el.style.paddingRight = '';
       }
     });
   }

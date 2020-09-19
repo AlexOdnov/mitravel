@@ -2,7 +2,7 @@ $color-light-1: #fff;
 $color-dark-1: #000;
 $color-dark-2: #788692;
 $color-dark-3: #1c2e3d;
-$color-dark-4: rgba(#151c24, 0.8);
+$color-dark-4: rgba(#151c24, 0.9);
 $color-accent-1: #73afba;
 $color-warning: #e8594e;
 
@@ -20,9 +20,13 @@ $bg-color-btn: $color-warning;
 $bg-color-btn--hover: darken($color-warning, 20%);
 $bg-color-btn--active: rgba($color-warning, 0.3);
 
-$icon-color: $color-dark-3;
-$icon-color--hover: rgba($color-dark-3, 0.6);
-$icon-color--active: rgba($color-dark-3, 0.3);
+$icon-color: $color-light-1;
+$icon-color--hover: rgba($color-light-1, 0.6);
+$icon-color--active: rgba($color-light-1, 0.3);
+
+$logo-color: $color-light-1;
+$logo-color--hover: rgba($color-light-1, 0.6);
+$logo-color--active: rgba($color-light-1, 0.3);
 
 $border-color: $color-dark-2;
 

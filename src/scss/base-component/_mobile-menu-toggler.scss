@@ -1,6 +1,8 @@
 .mobile-menu-toggler {
-  $mmt-color: $color-light-1;
+  $mmt-color: $icon-color;
   $mmt-size: 40px;
+
+  position: relative;
 
   display: block;
   width: $mmt-size;
@@ -10,6 +12,14 @@
   border: none;
   cursor: pointer;
   z-index: 10;
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background-color: $icon-color--hover;
+    }
+  }
 
   &::before,
   &::after {
