@@ -1,0 +1,71 @@
+.stories {
+  position: relative;
+
+  height: 1080px;
+
+  background-image: $alt-gradient, url(../../img/backgrounds/featured.jpg);
+  background-size: 50%, cover;
+
+  @media #{$d-laptop} {
+    height: auto;
+  }
+  // .stories__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @media #{$d-laptop} {
+      height: auto;
+      padding-bottom: 0;
+    }
+    @media #{$d-mobile} {
+      padding-top: 40px;
+    }
+  }
+  // .stories__wrapper
+  &__wrapper {
+    max-width: 634px;
+
+    @media #{$d-laptop} {
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+  // .stories__featured
+  &__featured-btn {
+    margin-bottom: 16px;
+  }
+  // .stories__title
+  &__title {
+    margin-bottom: 20px;
+  }
+  // .stories__description
+  &__description {
+    margin-bottom: 40px;
+
+    color: $color-light-1;
+  }
+  // .stories__featured
+  &__featured {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    height: 100%;
+    width: 35%;
+
+    @media #{$d-laptop} {
+      position: relative;
+      left: 50%;
+
+      width: 100vw;
+      height: auto;
+      transform: translateX(-50%);
+    }
+  }
+}
