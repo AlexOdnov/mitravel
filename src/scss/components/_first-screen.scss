@@ -1,0 +1,123 @@
+.first-screen {
+  min-height: 100vh;
+  background-image: url(../../img/backgrounds/first-screen.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  // .first-screen__container
+  &__container {
+    position: relative;
+
+    padding-top: 140px;
+    padding-bottom: 120px;
+    min-height: 100vh;
+
+    @media #{$d-laptop} {
+      padding-bottom: 0;
+    }
+
+    @media #{$d-mobile} {
+      padding-top: 100px;
+    }
+  }
+  // .first-screen__new-book
+  &__new-book {
+    margin-bottom: 40px;
+
+    font-size: $font-size-small;
+    color: $font-color-btn;
+
+    background-color: rgba($color-dark-4, 0.6);
+    @media #{$d-mobile} {
+      margin-bottom: 20px;
+    }
+  }
+  // .first-screen__title
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    max-width: 630px;
+
+    font-size: 80px;
+    line-height: 1.05;
+    color: $color-light-1;
+
+    @media #{$d-laptop} {
+      max-width: 100%;
+
+      font-size: $font-size-title;
+    }
+
+    @media #{$d-mobile} {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+  }
+  // .first-screen__description
+  &__description {
+    max-width: 500px;
+    margin-bottom: 55px;
+
+    color: $color-light-1;
+
+    @media #{$d-laptop} {
+      max-width: 100%;
+    }
+
+    @media #{$d-mobile} {
+      margin-bottom: 20px;
+    }
+  }
+  // .first-screen__buy-book
+  &__buy-book {
+    margin-bottom: 40px;
+    @media #{$d-mobile} {
+      margin-bottom: 20px;
+    }
+  }
+  // .first-screen__search
+  &__search {
+    position: absolute;
+    bottom: 0;
+
+    height: 120px;
+    width: calc(100% - 60px - 502px);
+
+    border-radius: 4px 0px 0px 0px;
+
+    overflow: hidden;
+
+    @media #{$d-laptop} {
+      position: static;
+
+      width: 100%;
+      height: 75px;
+      margin-bottom: 40px;
+
+      border-radius: 4px;
+    }
+
+    @media #{$d-mobile} {
+      margin-bottom: 20px;
+    }
+  }
+
+  // .first-screen__slider
+  &__slider {
+    position: absolute;
+    bottom: 0;
+    right: $container-padding;
+
+    width: 502px;
+
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    @media #{$d-laptop} {
+      position: relative;
+      right: initial;
+
+      width: 100%;
+    }
+  }
+}

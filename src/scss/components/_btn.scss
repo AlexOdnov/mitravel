@@ -1,24 +1,37 @@
 .btn {
   display: inline-flex;
-  padding: 1em 2em;
+  padding: 30px 68px;
   align-items: center;
   justify-content: center;
 
-  font-size: $font-color-base;
+  font-size: $font-size-small;
   font-weight: $font-weight-bold;
+  line-height: 1;
+  letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
-  color: $font-color-base;
+  color: $font-color-btn;
 
-  border: 2px solid $border-color;
+  border: 2px solid transparent;
+  border-radius: 8px;
+
+  background-color: $bg-color-btn;
 
   transition: all 0.3s ease 0s;
   outline: none;
 
+  @media #{$d-mobile} {
+    padding: 20px 40px;
+  }
+
   &:hover,
   &:focus {
+    background-color: $bg-color-btn--hover;
+    color: $font-color-btn--hover;
   }
   &:active {
+    background-color: $bg-color-btn--active;
+    color: $font-color-btn--active;
   }
 
   // .btn--wide
@@ -29,5 +42,23 @@
   &--center {
     display: flex;
     margin: 0 auto;
+  }
+  // .btn--round
+  &--round {
+    padding: 16px 30px;
+    border-radius: 24px;
+  }
+  // .btn--warning
+  &--warning {
+    background-color: $color-warning;
+    &:hover,
+    &:focus {
+      background-color: darken($color-warning, 10%);
+      color: $font-color-btn;
+    }
+    &:active {
+      background-color: rgba($color-warning, 0.6);
+      color: $font-color-btn--active;
+    }
   }
 }

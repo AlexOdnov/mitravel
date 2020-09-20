@@ -12,13 +12,13 @@ $font-color-link: $color-dark-2;
 $font-color-link--hover: rgba($color-dark-2, 0.6);
 $font-color-link--active: rgba($color-dark-2, 0.3);
 $font-color-btn: $color-light-1;
-$font-color-btn--hover: $color-light-1;
+$font-color-btn--hover: rgba($color-light-1, 0.6);
 $font-color-btn--active: rgba($color-light-1, 0.3);
 
 $bg-color-base: $color-light-1;
-$bg-color-btn: $color-warning;
-$bg-color-btn--hover: darken($color-warning, 20%);
-$bg-color-btn--active: rgba($color-warning, 0.3);
+$bg-color-btn: $color-accent-1;
+$bg-color-btn--hover: darken($color-accent-1, 20%);
+$bg-color-btn--active: rgba($color-accent-1, 0.6);
 
 $icon-color: $color-light-1;
 $icon-color--hover: rgba($color-light-1, 0.6);
@@ -44,13 +44,14 @@ $font-weight-thin: 100;
 
 $container-width: 1630px;
 $container-padding: 30px;
+$container-padding-mobile: 15px;
 
 //breakpoint
 $bp-mob: 320px;
-$bp-mob-large: 480px;
-$bp-tab: 768px;
+$bp-mob-large: 450px;
+$bp-tab: 540px;
 $bp-lap: 800px;
-$bp-des: 1250px;
+$bp-des: 1050px;
 
 //mobile-first media query
 $mobile: (

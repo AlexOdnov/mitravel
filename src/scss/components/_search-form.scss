@@ -1,0 +1,44 @@
+.search-form {
+  display: flex;
+
+  border-bottom: 2px solid $border-color;
+  background-color: $bg-color-base;
+  // .search-form__input
+  &__input {
+    flex-grow: 1;
+    padding: 0 55px;
+
+    border: none;
+    outline: none;
+
+    @media #{$d-mobile} {
+      padding: 0 15px;
+    }
+  }
+  // .search-form__btn
+  &__btn {
+    padding: 0;
+    width: 120px;
+
+    border-radius: 0;
+    background-color: transparent;
+    stroke: $color-dark-1;
+    stroke-width: 2;
+    &:hover,
+    &:focus {
+      background-color: darken($bg-color-base, 10%);
+    }
+    &:active {
+      stroke: rgba($color-dark-1, 0.6);
+    }
+
+    @media #{$d-laptop} {
+      width: 75px;
+    }
+
+    @media #{$d-mobile} {
+      width: 50px;
+      padding: 0;
+    }
+  }
+}

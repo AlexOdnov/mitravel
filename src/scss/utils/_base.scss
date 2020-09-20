@@ -12,6 +12,11 @@ body {
   max-width: $container-width;
   padding-left: $container-padding;
   padding-right: $container-padding;
+
+  @media #{$d-mobile} {
+    padding-left: $container-padding-mobile;
+    padding-right: $container-padding-mobile;
+  }
 }
 
 .non-scrollable {

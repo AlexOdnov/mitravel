@@ -7,20 +7,9 @@
 
   width: 100%;
 
-  &::after {
-    content: '';
+  background-color: $color-dark-4;
 
-    position: absolute;
-    top: 0;
-
-    display: block;
-    width: 100vw;
-    height: $header-height;
-
-    background-color: $color-dark-4;
-
-    z-index: 5;
-  }
+  z-index: 2;
 
   &__container {
     position: relative;
@@ -28,16 +17,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     height: $header-height;
   }
 
   &__social-list {
-    z-index: 10;
+    @media #{$d-mobile} {
+      display: none;
+    }
   }
 
   &__logo {
-    z-index: 10;
   }
 
   &__mmt {
