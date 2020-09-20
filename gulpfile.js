@@ -9,6 +9,7 @@ const htmlmin = require('gulp-htmlmin');
 const sassglob = require('gulp-sass-glob');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const gcmq = require('gulp-group-css-media-queries');
 const csso = require('gulp-csso');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
@@ -97,6 +98,7 @@ const css = () => {
       )
     )
     .pipe(replace(/\.\.\/\.\.\//g, '../'))
+    .pipe(gcmq())
     .pipe(
       autoprefixer({
         cascade: false,
@@ -104,7 +106,7 @@ const css = () => {
     )
     .pipe(
       csso({
-        forceMediaMerge: true,
+        forceMediaMerge: false,
       })
     )
     .pipe(
