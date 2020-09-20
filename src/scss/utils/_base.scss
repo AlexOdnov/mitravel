@@ -19,6 +19,17 @@ body {
   }
 }
 
+.heading {
+  max-width: 767px;
+  // .heading__title
+  &__title {
+    font-size: $font-size-title;
+    font-weight: $font-weight-bold;
+    color: $font-color-title;
+    line-height: 80px;
+  }
+}
+
 .non-scrollable {
   overflow-y: hidden;
 }
