@@ -1,0 +1,38 @@
+.sign-up {
+  border-radius: 8px;
+  background-color: $bg-color-base;
+  overflow: hidden;
+  // .sign-up__fieldset
+  &__fieldset {
+    padding: 70px;
+
+    border: none;
+
+    @media #{$d-mobile} {
+      padding: 30px;
+    }
+  }
+  // .sign-up__input
+  &__input {
+    width: 100%;
+    padding-bottom: 25px;
+
+    text-transform: uppercase;
+    color: $color-dark-3;
+    font-size: $font-size-small;
+
+    border: none;
+    border-bottom: 1px solid $border-color;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  // .sign-up__submit
+  &__submit {
+    height: 80px;
+
+    border-radius: 0;
+
+    outline: none;
+  }
+}
