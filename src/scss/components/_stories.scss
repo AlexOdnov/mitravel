@@ -1,37 +1,32 @@
 .stories {
   position: relative;
 
-  height: 1080px;
+  min-height: 100vh;
 
   background-image: $alt-gradient, url(../../img/backgrounds/featured.jpg);
   background-size: 50%, cover;
-
-  @media #{$d-laptop} {
-    height: auto;
-  }
   // .stories__container
   &__container {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
+    align-items: flex-end;
+    justify-content: space-between;
     height: 100%;
-    padding-top: 100px;
-    padding-bottom: 100px;
 
     @media #{$d-laptop} {
       height: auto;
-      padding-bottom: 0;
-    }
-    @media #{$d-mobile} {
+      flex-direction: column;
+      align-items: flex-start;
       padding-top: 40px;
     }
   }
   // .stories__wrapper
   &__wrapper {
+    width: 60%;
     max-width: 634px;
+    margin-bottom: 100px;
 
     @media #{$d-laptop} {
+      width: 100%;
       max-width: 100%;
       margin-bottom: 40px;
     }
@@ -52,19 +47,18 @@
   }
   // .stories__featured
   &__featured {
-    position: absolute;
+    position: relative;
     right: 0;
-    top: 0;
 
-    height: 100%;
-    width: 35%;
+    width: 40%;
+
+    transform: translateX(calc((100vw - 100% * 2.5) / 2));
 
     @media #{$d-laptop} {
-      position: relative;
       left: 50%;
 
       width: 100vw;
-      height: auto;
+
       transform: translateX(-50%);
     }
   }
