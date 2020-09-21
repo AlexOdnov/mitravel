@@ -2,10 +2,10 @@
   // .newsletter__container
   &__container {
     padding-top: 140px;
-    padding-bottom: 96px;
+    padding-bottom: 80px;
     @media #{$d-laptop} {
       padding-top: 40px;
-      padding-bottom: 40px;
+      padding-bottom: 0;
     }
   }
   // .newsletter__wrapper
