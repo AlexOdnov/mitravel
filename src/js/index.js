@@ -12,3 +12,12 @@ const swiperFirstScreen = new Swiper('.slider-promo', {
     prevEl: '.slider-promo__button-prev',
   },
 });
+
+const swiperBig = new Swiper('.slider-big', {
+  loop: true,
+  slidesPerView: 'auto',
+  loopedSlides: 3,
+  spaceBetween: 90,
+  centeredSlides: true,
+  initialSlide: 1,
+});

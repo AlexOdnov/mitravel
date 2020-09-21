@@ -23,6 +23,8 @@ body {
   max-width: 767px;
   // .heading__title
   &__title {
+    margin-bottom: 24px;
+
     font-size: $font-size-title;
     font-weight: $font-weight-bold;
     color: $font-color-title;
@@ -33,6 +35,8 @@ body {
   }
   &__title--light {
     color: $color-light-1;
+  }
+  &__description {
   }
 }
 
