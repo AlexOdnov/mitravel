@@ -10,6 +10,9 @@
 
     border-radius: 8px;
     border: 1px solid $border-color;
+    background-image: url(../../img/backgrounds/user.svg);
+    background-repeat: no-repeat;
+    background-position: 95% center;
 
     @media #{$d-mobile} {
       padding: 15px 60px 15px 20px;
