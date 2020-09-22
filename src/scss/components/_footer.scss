@@ -1,2 +1,136 @@
 .footer {
+  border-top: 1px solid $border-color;
+  // .footer__container
+  &__container {
+    padding-top: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media #{$d-laptop} {
+      padding-top: 40px;
+    }
+  }
+  // .footer__column
+  &__column {
+    @media #{$d-mobile} {
+      flex-basis: 100%;
+    }
+  }
+  // .footer__title
+  &__title {
+    position: relative;
+
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    text-transform: uppercase;
+    color: $font-color-title;
+    font-size: $font-size-small;
+    letter-spacing: 2px;
+
+    @media #{$d-mobile} {
+      text-align: center;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      display: block;
+      height: 1px;
+      width: 48px;
+
+      background-color: $color-accent-1;
+
+      @media #{$d-mobile} {
+        width: 100%;
+      }
+    }
+  }
+  // .footer__list
+  &__list {
+    // .footer__list--horizontal
+    &--horizontal {
+      display: flex;
+      & .footer__item {
+        margin-bottom: 0;
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+  // .footer__item
+  &__item {
+    margin-bottom: 10px;
+
+    font-size: $font-size-small;
+
+    @media #{$d-mobile} {
+      text-align: center;
+    }
+  }
+  // .footer__link
+  &__link {
+    text-decoration: none;
+    color: $font-color-link;
+
+    transition: all 0.3s ease 0s;
+    &:hover,
+    &:focus {
+      color: $font-color-link--hover;
+    }
+    &:active {
+      color: $font-color-link--active;
+    }
+  }
+  // .footer__subscribe
+  &__subscribe {
+    flex-basis: 370px;
+
+    @media #{$d-mobile} {
+      flex-basis: 100%;
+    }
+  }
+  // .footer__bottom
+  &__bottom {
+    position: relative;
+
+    flex-basis: 100%;
+    padding: 30px 0;
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @media #{$d-laptop} {
+      margin-top: 10px;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      display: block;
+      height: 1px;
+      width: 100vw;
+
+      background-color: $border-color;
+
+      transform: translateX(-50%);
+    }
+  }
+  // .footer__copyright
+  &__copyright {
+    font-size: $font-size-small;
+  }
 }
