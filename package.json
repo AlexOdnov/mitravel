@@ -1,6 +1,5 @@
 {
   "private": true,
-  "homepage": "https://AlexOdnov.github.io/mitravel",
   "scripts": {
     "dev": "gulp",
     "build": "gulp build",
@@ -15,8 +14,7 @@
     "svg": "gulp svg",
     "favicon": "gulp favicon",
     "ie": "gulp ieTest",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d build"
   },
   "browserslist": [
     "last 3 version",
