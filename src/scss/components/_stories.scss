@@ -5,7 +5,8 @@
 
   background-image: $alt-gradient, url(../../img/backgrounds/featured.jpg);
   background-size: 50%, cover;
-  // .stories__container
+
+  //.stories__container
   &__container {
     display: flex;
     align-items: flex-end;
@@ -13,13 +14,14 @@
     height: 100%;
 
     @media #{$d-laptop} {
-      height: auto;
       flex-direction: column;
       align-items: flex-start;
+      height: auto;
       padding-top: 40px;
     }
   }
-  // .stories__wrapper
+
+  //.stories__wrapper
   &__wrapper {
     width: 60%;
     max-width: 634px;
@@ -31,21 +33,25 @@
       margin-bottom: 40px;
     }
   }
-  // .stories__featured
+
+  //.stories__featured
   &__featured-btn {
     margin-bottom: 16px;
   }
-  // .stories__title
+
+  //.stories__title
   &__title {
     margin-bottom: 20px;
   }
-  // .stories__description
+
+  //.stories__description
   &__description {
     margin-bottom: 40px;
 
     color: $color-light-1;
   }
-  // .stories__featured
+
+  //.stories__featured
   &__featured {
     position: relative;
     right: 0;

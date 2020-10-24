@@ -6,6 +6,7 @@ $color-dark-4: rgba(#151c24, 0.9);
 $color-accent-1: #73afba;
 $color-warning: #e8594e;
 
+//font
 $font-color-base: $color-dark-2;
 $font-color-title: $color-dark-3;
 $font-color-link: $color-dark-2;
@@ -15,34 +16,42 @@ $font-color-btn: $color-light-1;
 $font-color-btn--hover: rgba($color-light-1, 0.6);
 $font-color-btn--active: rgba($color-light-1, 0.3);
 
+//background
 $bg-color-base: $color-light-1;
 $bg-color-btn: $color-accent-1;
 $bg-color-btn--hover: darken($color-accent-1, 20%);
 $bg-color-btn--active: rgba($color-accent-1, 0.6);
 
+//icon
 $icon-color: $color-light-1;
 $icon-color--hover: rgba($color-light-1, 0.6);
 $icon-color--active: rgba($color-light-1, 0.3);
 
+//logo
 $logo-color: $color-light-1;
 $logo-color--hover: rgba($color-light-1, 0.6);
 $logo-color--active: rgba($color-light-1, 0.3);
 
+//border
 $border-color: $color-dark-2;
 
+//font-family
 $font-base: 'Open Sans', sans-serif;
 $font-accent: 'Roboto', sans-serif;
 
+//font-size
 $font-size-base: 16px;
 $font-size-small: 0.8rem;
 $font-size-big: 2rem;
 $font-size-title: 4rem;
 $font-size-title-mob: 2rem;
 
+//font-weight
 $font-weight-base: 400;
 $font-weight-bold: 700;
 $font-weight-thin: 100;
 
+//container
 $container-width: 1630px;
 $container-padding: 30px;
 $container-padding-mobile: 15px;
@@ -85,6 +94,8 @@ $d-laptop: (
   max-width: $bp-des,
 );
 
+//gradient
+/* stylelint-disable */
 $base-gradient: linear-gradient(
   180deg,
   rgba(0, 0, 0, 0.0001) 0%,
@@ -98,3 +109,5 @@ $alt-gradient: linear-gradient(
   rgba(28, 46, 59, 0.0001) 50%,
   #091117 100%
 ); // featured stories overlay
+
+/* stylelint-enable */

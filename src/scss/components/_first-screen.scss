@@ -1,16 +1,17 @@
 .first-screen {
   min-height: 100vh;
   background-image: url(../../img/backgrounds/first-screen.jpg);
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  // .first-screen__container
+  background-repeat: no-repeat;
+
+  //.first-screen__container
   &__container {
     position: relative;
 
+    min-height: 100vh;
     padding-top: 140px;
     padding-bottom: 120px;
-    min-height: 100vh;
 
     @media #{$d-laptop} {
       padding-bottom: 0;
@@ -20,7 +21,8 @@
       padding-top: 100px;
     }
   }
-  // .first-screen__new-book
+
+  //.first-screen__new-book
   &__new-book {
     margin-bottom: 40px;
 
@@ -28,15 +30,17 @@
     color: $font-color-btn;
 
     background-color: rgba($color-dark-4, 0.6);
+
     @media #{$d-mobile} {
       margin-bottom: 20px;
     }
   }
-  // .first-screen__title
+
+  //.first-screen__title
   &__title {
+    max-width: 630px;
     margin: 0;
     margin-bottom: 40px;
-    max-width: 630px;
 
     font-size: 80px;
     line-height: 1.05;
@@ -49,11 +53,13 @@
     }
 
     @media #{$d-mobile} {
-      font-size: 32px;
       margin-bottom: 20px;
+
+      font-size: 32px;
     }
   }
-  // .first-screen__description
+
+  //.first-screen__description
   &__description {
     max-width: 500px;
     margin-bottom: 55px;
@@ -68,24 +74,26 @@
       margin-bottom: 20px;
     }
   }
-  // .first-screen__buy-book
+
+  //.first-screen__buy-book
   &__buy-book {
     margin-bottom: 40px;
+
     @media #{$d-mobile} {
       margin-bottom: 20px;
     }
   }
-  // .first-screen__search
+
+  //.first-screen__search
   &__search {
     position: absolute;
     bottom: 0;
 
-    height: 120px;
     width: calc(100% - 60px - 502px);
-
-    border-radius: 4px 0px 0px 0px;
-
+    height: 120px;
     overflow: hidden;
+
+    border-radius: 4px 0 0;
 
     @media #{$d-laptop} {
       position: static;
@@ -102,11 +110,11 @@
     }
   }
 
-  // .first-screen__slider
+  //.first-screen__slider
   &__slider {
     position: absolute;
-    bottom: 0;
     right: $container-padding;
+    bottom: 0;
 
     width: 502px;
 

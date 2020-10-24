@@ -4,17 +4,16 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 5;
 
   width: 100%;
 
   background-color: $color-dark-4;
 
-  z-index: 5;
-
   &__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     height: $header-height;
   }
 

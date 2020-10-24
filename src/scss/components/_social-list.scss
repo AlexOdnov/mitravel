@@ -1,26 +1,36 @@
 .social-list {
   display: flex;
-  // .social-list__item
+
+  //.social-list__item
   &__item {
     &:not(:last-child) {
-      margin-right: 40px;
+      margin-right: 10px;
     }
   }
-  // .social-list__link
+
+  //.social-list__link
   &__link {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+
     line-height: 1;
     fill: $icon-color;
     transition: fill 0.3s ease 0s;
+
     &:hover,
     &:focus {
       fill: $icon-color--hover;
     }
+
     &:active {
       fill: $icon-color--active;
     }
   }
-  // .social-list__icon
+
+  //.social-list__icon
   &__icon {
   }
 }

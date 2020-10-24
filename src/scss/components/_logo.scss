@@ -2,18 +2,20 @@
   display: flex;
   align-items: center;
 
-  text-transform: uppercase;
-  color: $logo-color;
   font-weight: $font-weight-bold;
-  text-decoration: none;
   font-size: 22px;
   line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $logo-color;
+
   transition: color 0.3s ease 0s;
 
   &:hover,
   &:focus {
     color: $logo-color--hover;
   }
+
   &:active {
     color: $logo-color--active;
   }

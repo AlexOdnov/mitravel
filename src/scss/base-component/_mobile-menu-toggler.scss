@@ -3,23 +3,17 @@
   $mmt-size: 40px;
 
   position: relative;
+  z-index: 10;
 
   display: block;
   width: $mmt-size;
   height: $mmt-size;
   padding: 0;
+
   background: none;
   border: none;
-  cursor: pointer;
-  z-index: 10;
 
-  &:hover,
-  &:focus {
-    &::before,
-    &::after {
-      background-color: $icon-color--hover;
-    }
-  }
+  cursor: pointer;
 
   &::before,
   &::after {
@@ -38,6 +32,14 @@
 
   &::after {
     bottom: $mmt-size * 0.4;
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background-color: $icon-color--hover;
+    }
   }
 
   &.active {

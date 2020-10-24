@@ -1,9 +1,10 @@
 .search-form {
   display: flex;
 
-  border-bottom: 2px solid $border-color;
   background-color: $bg-color-base;
-  // .search-form__input
+  border-bottom: 2px solid $border-color;
+
+  //.search-form__input
   &__input {
     flex-grow: 1;
     padding: 0 55px;
@@ -15,19 +16,23 @@
       padding: 0 15px;
     }
   }
-  // .search-form__btn
-  &__btn {
-    padding: 0;
-    width: 120px;
 
-    border-radius: 0;
-    background-color: transparent;
+  //.search-form__btn
+  &__btn {
+    width: 120px;
+    padding: 0;
+
     stroke: $color-dark-1;
     stroke-width: 2;
+
+    background-color: transparent;
+    border-radius: 0;
+
     &:hover,
     &:focus {
       background-color: darken($bg-color-base, 10%);
     }
+
     &:active {
       stroke: rgba($color-dark-1, 0.6);
     }

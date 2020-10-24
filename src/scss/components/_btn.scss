@@ -1,24 +1,23 @@
 .btn {
   display: inline-flex;
-  padding: 30px 68px;
   align-items: center;
   justify-content: center;
+  padding: 30px 68px;
 
-  font-size: $font-size-small;
   font-weight: $font-weight-bold;
+  font-size: $font-size-small;
   line-height: 1;
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
   color: $font-color-btn;
 
+  background-color: $bg-color-btn;
   border: 2px solid transparent;
   border-radius: 8px;
-
-  background-color: $bg-color-btn;
+  outline: none;
 
   transition: all 0.3s ease 0s;
-  outline: none;
 
   @media #{$d-mobile} {
     padding: 20px 40px;
@@ -26,39 +25,49 @@
 
   &:hover,
   &:focus {
-    background-color: $bg-color-btn--hover;
     color: $font-color-btn--hover;
-  }
-  &:active {
-    background-color: $bg-color-btn--active;
-    color: $font-color-btn--active;
+
+    background-color: $bg-color-btn--hover;
   }
 
-  // .btn--wide
+  &:active {
+    color: $font-color-btn--active;
+
+    background-color: $bg-color-btn--active;
+  }
+
+  //.btn--wide
   &--wide {
     width: 100%;
   }
-  // .btn--center
+
+  //.btn--center
   &--center {
     display: flex;
     margin: 0 auto;
   }
-  // .btn--round
+
+  //.btn--round
   &--round {
     padding: 16px 30px;
     border-radius: 24px;
   }
-  // .btn--warning
+
+  //.btn--warning
   &--warning {
     background-color: $color-warning;
+
     &:hover,
     &:focus {
-      background-color: darken($color-warning, 10%);
       color: $font-color-btn;
+
+      background-color: darken($color-warning, 10%);
     }
+
     &:active {
-      background-color: rgba($color-warning, 0.6);
       color: $font-color-btn--active;
+
+      background-color: rgba($color-warning, 0.6);
     }
   }
 }

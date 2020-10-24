@@ -1,18 +1,19 @@
 .subscribe {
-  // .subscribe__title
+  //.subscribe__title
   &__title {
   }
-  // .subscribe__input
-  &__input {
-    padding: 20px 60px 20px 30px;
-    margin-bottom: 16px;
-    width: 100%;
 
-    border-radius: 8px;
-    border: 1px solid $border-color;
+  //.subscribe__input
+  &__input {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 20px 60px 20px 30px;
+
     background-image: url(../../img/backgrounds/user.svg);
-    background-repeat: no-repeat;
     background-position: 95% center;
+    background-repeat: no-repeat;
+    border: 1px solid $border-color;
+    border-radius: 8px;
 
     @media #{$d-mobile} {
       padding: 15px 60px 15px 20px;

@@ -1,41 +1,45 @@
 body {
-  color: $font-color-base;
   font-family: $font-base;
-  font-size: $font-size-base;
   font-weight: $font-weight-base;
+  font-size: $font-size-base;
+  color: $font-color-base;
 
   background-color: $bg-color-base;
 }
 
 .container {
-  margin: 0 auto;
   max-width: $container-width;
-  padding-left: $container-padding;
+  margin: 0 auto;
   padding-right: $container-padding;
+  padding-left: $container-padding;
 
   @media #{$d-mobile} {
-    padding-left: $container-padding-mobile;
     padding-right: $container-padding-mobile;
+    padding-left: $container-padding-mobile;
   }
 }
 
 .heading {
   max-width: 767px;
-  // .heading__title
+
+  //.heading__title
   &__title {
     margin-bottom: 24px;
 
-    font-size: $font-size-title;
     font-weight: $font-weight-bold;
-    color: $font-color-title;
+    font-size: $font-size-title;
     line-height: 1.3;
+    color: $font-color-title;
+
     @media #{$d-mobile} {
       font-size: $font-size-title-mob;
     }
   }
+
   &__title--light {
     color: $color-light-1;
   }
+
   &__description {
   }
 }
@@ -51,13 +55,11 @@ input[type='radio'].visually-hidden {
 
   width: 1px;
   height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
   clip-path: inset(100%);
-  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
   overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
 }

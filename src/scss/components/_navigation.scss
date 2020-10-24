@@ -5,23 +5,26 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 5;
 
   width: 100vw;
 
-  background-color: $color-dark-4;
   color: $color-light-1;
-  z-index: 5;
+
+  background-color: $color-dark-4;
+  visibility: hidden;
+
   transform: translate(100%, 100%);
 
   &__list {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: center;
     flex-wrap: nowrap;
+    align-items: center;
+    justify-content: start;
     max-height: calc(100vh - #{$header-height} - #{$mob-mozilla});
-    overflow-y: auto;
     padding-bottom: 0.5em;
+    overflow-y: auto;
   }
 
   &__item {
@@ -31,9 +34,9 @@
   &__link {
     display: block;
 
+    font-size: 1.5rem;
     text-align: center;
     text-decoration: none;
-    font-size: 1.5rem;
 
     transition: text-decoration 0.3s ease 0s;
 
@@ -44,6 +47,8 @@
   }
 
   &.active {
+    visibility: visible;
+
     transform: translate(0, 100%);
   }
 }

@@ -1,12 +1,14 @@
 .slider-promo {
-  // .slider-promo__slide
+  //.slider-promo__slide
   &__slide {
   }
-  // .slider-promo__img
+
+  //.slider-promo__img
   &__img {
     width: 100%;
   }
-  // .slider-promo__desctription
+
+  //.slider-promo__desctription
   &__desctription {
     display: flex;
     align-items: center;
@@ -14,10 +16,10 @@
     height: 120px;
     padding: 0 120px;
 
-    color: $color-light-1;
-    text-transform: uppercase;
     font-weight: $font-weight-bold;
     text-align: center;
+    text-transform: uppercase;
+    color: $color-light-1;
 
     background-color: $color-accent-1;
 
@@ -30,22 +32,26 @@
       padding: 0 50px;
     }
   }
-  // .slider-promo__button-prev
+
+  //.slider-promo__button-prev
   &__button-prev,
   &__button-next {
     position: absolute;
     bottom: 0;
+    z-index: 5;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px;
     width: 120px;
+    height: 120px;
 
     line-height: 1;
 
-    z-index: 5;
+    background-color: $color-accent-1;
+
     transition: background-color 0.3s ease 0s;
+
     cursor: pointer;
 
     &:hover,
@@ -54,19 +60,21 @@
     }
 
     @media #{$d-laptop} {
-      height: 75px;
       width: 75px;
+      height: 75px;
     }
 
     @media #{$d-mobile} {
       width: 50px;
     }
   }
-  // .slider-promo__button-prev
+
+  //.slider-promo__button-prev
   &__button-prev {
     left: 0;
   }
-  // .slider-promo__button-next
+
+  //.slider-promo__button-next
   &__button-next {
     right: 0;
   }
